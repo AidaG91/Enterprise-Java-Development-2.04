@@ -1,6 +1,6 @@
 public class Person {
     private int id;
-    private String name = "firstName lastName";
+    private String name;
     private int age;
     private String occupation;
 
@@ -19,6 +19,23 @@ public class Person {
         }
     }
 
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getOccupation() {
+        return occupation;
+    }
+
     public boolean equals(Object obj) {
         if (obj == null) return false;
         if (!(obj instanceof Person)) return false;
@@ -32,4 +49,10 @@ public class Person {
             return false;
         }
     }
+
+    @Override
+    public String toString() {
+        return "ID: " + id + ", Nombre: " + name + ", Edad: " + age + ", Ocupación: " + occupation;
+    }
+
 }
