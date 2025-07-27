@@ -12,6 +12,10 @@ public class PersonsList{
         persons = new ArrayList<>();
     }
 
+    public void addPerson(Person p) {
+        persons.add(p);
+    }
+
     public Person findByName(String name) {
         if (name == null || name.split(" ").length != 2) {
             throw new IllegalArgumentException("Formato de nombre inválido. Usa nombre y apellido");
